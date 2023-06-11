@@ -1,0 +1,55 @@
+<div class="title-card">
+  <h2>Add Book</h2>
+</div>
+
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="book-form">
+  <div class="form-group">
+    <label>Title:</label>
+    <input type="text" formControlName="title" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Author:</label>
+    <input type="text" formControlName="author" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Country:</label>
+    <input type="text" formControlName="country" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Language:</label>
+    <input type="text" formControlName="language" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Link:</label>
+    <input type="text" formControlName="link" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Pages:</label>
+    <input type="number" formControlName="pages" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Year:</label>
+    <input type="number" formControlName="year" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Price:</label>
+    <input type="number" formControlName="price" class="form-control" />
+  </div>
+  <!-- <div class="form-group">
+    <label>Bookshop:</label>
+    <select formControlName="bookshop" class="form-control">
+      <option *ngFor="let bookshop of bookshops" [value]="bookshop.id">
+        {{ bookshop.shopName }}
+      </option>
+    </select>
+  </div> -->
+  <div class="middle-button">
+    <button
+      type="submit"
+      [disabled]="!bookForm.valid"
+      class="btn btn-primary custom-button"
+    >
+      Add Book
+    </button>
+  </div>
+</form>

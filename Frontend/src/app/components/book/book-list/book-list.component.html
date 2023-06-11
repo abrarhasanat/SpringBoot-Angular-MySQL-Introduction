@@ -1,0 +1,31 @@
+<div class="bookcontainer">
+  <div *ngFor="let book of books">
+    <div class="book">
+      <div
+        class="bookpic"
+        style="background-image: url('{{ book.link }}');"
+      ></div>
+      <div class="bookinfo">
+        <div class="booktitlebox">
+          <div class="title">{{ book.title }}</div>
+          <div class="author">{{ book.author }}</div>
+        </div>
+        <div>
+          <p><strong>Country:</strong> {{ book.country }}</p>
+          <p><strong>Language:</strong> {{ book.language }}</p>
+          <p><strong>Pages:</strong> {{ book.pages }}</p>
+          <p><strong>Year:</strong> {{ book.year }}</p>
+          <p><strong>Price:</strong> ${{ book.price }}</p>
+        </div>
+        <div class="buttons">
+          <button class="edit-button" (click)="editBookCall(book.id)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="delete-button" (click)="deleteBook(book.id)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

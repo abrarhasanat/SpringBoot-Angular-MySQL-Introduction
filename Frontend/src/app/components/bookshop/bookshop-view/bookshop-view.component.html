@@ -1,0 +1,62 @@
+<div *ngIf="bookshop">
+  <div class="title-card">
+    <div class="bookshopinfo">
+      <div class="shopname">
+        <span>{{ bookshop.shopName }}</span>
+        <span class="location">{{ bookshop.location }}</span>
+      </div>
+      <div>
+        <p>
+          <i class="fas fa-phone icons"></i>
+          {{ bookshop.contactNumber }}
+        </p>
+        <p>
+          <i class="fas fa-envelope icons"></i>
+          {{ bookshop.email }}
+        </p>
+        <div class="buttons">
+          <button class="edit-button" (click)="editBookshopCall(bookshop.id)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="delete-button" (click)="deleteBookshop(bookshop.id)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<div class="bookcontainer">
+  <div *ngFor="let book of bookshop.books">
+    <div class="book">
+      <div
+        class="bookpic"
+        style="background-image: url('{{ book.link }}');"
+      ></div>
+      <div class="bookinfo">
+        <div class="booktitlebox">
+          <div class="title">{{ book.title }}</div>
+          <div class="author">{{ book.author }}</div>
+        </div>
+        <div>
+          <p><strong>Country:</strong> {{ book.country }}</p>
+          <p><strong>Language:</strong> {{ book.language }}</p>
+
+          <p><strong>Pages:</strong> {{ book.pages }}</p>
+          <p><strong>Year:</strong> {{ book.year }}</p>
+          <p><strong>Price:</strong> ${{ book.price }}</p>
+        </div>
+        <div class="buttons">
+          <button class="edit-button" (click)="editBookCall(book.id)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="delete-button" (click)="deleteBook(book.id)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

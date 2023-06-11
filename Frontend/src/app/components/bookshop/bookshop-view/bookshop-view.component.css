@@ -1,0 +1,188 @@
+.title-card {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookshopcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  justify-content: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookshop {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background: rgb(246, 246, 246);
+  display: flex;
+  overflow: hidden;
+}
+.booktitlebox {
+  height: 80px;
+}
+.bookshopinfo {
+  flex-grow: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bookshopinfo .shopname {
+  width: 300px;
+  float: left;
+  display: flex;
+  align-items: baseline;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  color: #5a5a5a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 5px;
+  padding-right: 40px;
+}
+
+.bookshopinfo .location {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-left: 10px;
+  color: #5a5a5a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icons {
+  color: #3b3232;
+}
+
+.bookshopinfo p {
+  width: 350px;
+  float: left;
+  font-size: 16px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bookshopinfo .buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+}
+
+.delete-button,
+.edit-button,
+.view-button {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: none;
+  background: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  color: #e64444;
+}
+
+.edit-button:hover {
+  color: #65f740;
+}
+
+.view-button:hover {
+  color: #5144e7;
+}
+
+.delete-button i,
+.edit-button i,
+.view-button i {
+  margin-right: 5px;
+}
+
+.bookcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.book {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background: rgb(246, 246, 246);
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book:hover {
+  transform: scale(1.15);
+}
+
+.bookpic {
+  flex-basis: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.bookpic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bookinfo {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.bookinfo .title {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  color: #5a5a5a;
+}
+
+.bookinfo .author {
+  font-size: 12px;
+  color: #8a8a8a;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.bookinfo p {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.book a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.book a:hover {
+  text-decoration: underline;
+}
+
+.bookinfo .buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+}

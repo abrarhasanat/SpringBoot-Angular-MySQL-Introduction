@@ -1,0 +1,33 @@
+<div class="bookshopcontainer">
+  <div *ngFor="let bookshop of bookshops">
+    <div class="bookshop">
+      <div class="bookshopinfo">
+        <div class="shopname">
+          <span>{{ bookshop.shopName }}</span>
+          <span class="location">{{ bookshop.location }}</span>
+        </div>
+        <div>
+          <p>
+            <i class="fas fa-phone icons"></i>
+            {{ bookshop.contactNumber }}
+          </p>
+          <p>
+            <i class="fas fa-envelope icons"></i>
+            {{ bookshop.email }}
+          </p>
+          <div class="buttons">
+            <button class="view-button" (click)="viewBookshop(bookshop.id)">
+              <i class="fas fa-eye"></i>
+            </button>
+            <button class="edit-button" (click)="editBookshopCall(bookshop.id)">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="delete-button" (click)="deleteBookshop(bookshop.id)">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
